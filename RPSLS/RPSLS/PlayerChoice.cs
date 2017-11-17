@@ -12,7 +12,7 @@ namespace RPSLS
 
         public void PlayChoice()
         {
-            Console.WriteLine("How many players are playin \n Enter '1' or '2' ." );
+            Console.WriteLine("How many players are playing? \n Enter '1' or '2' ." );
                 playerChoice = Console.ReadLine();
             PlayDecision(playerChoice);
         }

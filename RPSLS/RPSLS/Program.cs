@@ -13,7 +13,7 @@ namespace RPSLS
             //can be 2 player or 1 player vs com game
             //player class (base class)
               //player and com will inherit
-            Player playChoice = new Player();
+            PlayerChoice playChoice = new PlayerChoice();
             playChoice.PlayChoice();
 
             Console.ReadKey();
