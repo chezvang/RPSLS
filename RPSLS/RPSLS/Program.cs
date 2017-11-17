@@ -13,8 +13,16 @@ namespace RPSLS
             //can be 2 player or 1 player vs com game
             //player class (base class)
               //player and com will inherit
-            PlayerChoice playChoice = new PlayerChoice();
+            StartGame playChoice = new StartGame();
             playChoice.PlayChoice();
+
+            //player pick, base class
+            //PlayerPick player = new PlayerPick();
+
+
+            //computer roll, if 1 player
+            ComPick pick = new ComPick();
+            pick.ComputerPick();
 
             Console.ReadKey();
             //random roll class

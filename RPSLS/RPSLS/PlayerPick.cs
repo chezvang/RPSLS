@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Roll
+    class PlayerPick
     {
-
     }
 }
