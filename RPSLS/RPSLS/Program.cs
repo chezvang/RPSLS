@@ -11,13 +11,12 @@ namespace RPSLS
         static void Main(string[] args)
         {
             //can be 2 player or 1 player vs com game
-            //player class (base class)
-              //player and com will inherit
             StartGame playChoice = new StartGame();
             playChoice.PlayChoice();
 
             //player pick, base class
-            //PlayerPick player = new PlayerPick();
+              //set player for inheritance
+            PlayerPick player = new PlayerPick();
 
 
             //computer roll, if 1 player
