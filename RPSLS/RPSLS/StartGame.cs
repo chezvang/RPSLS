@@ -12,7 +12,7 @@ namespace RPSLS
 
         public void PlayChoice()
         {
-            Console.WriteLine("How many players are playing? \n Enter '1' or '2' ." );
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! How many players are playing? \n Enter '1' or '2' ." );
             playerChoice = Console.ReadLine();
             PlayDecision(playerChoice);
         }
@@ -32,7 +32,7 @@ namespace RPSLS
                     twogame.PlayerOneStart(0, 0);
                     break;
                 default:
-                    Console.WriteLine("Please choose the number of players.");
+                    Console.WriteLine("Please choose the number of players.\n");
                     PlayChoice();
                     break;
             }
