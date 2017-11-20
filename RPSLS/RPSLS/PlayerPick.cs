@@ -19,7 +19,7 @@ namespace RPSLS
 
         public virtual string PromptChoice()
         {
-            Console.WriteLine("\n Choices: \n 1. Rock \n 2. Paper \n 3. Scissors \n 4. Spock \n 5. Lizard\nChoose your weapon:");
+            Console.WriteLine("\n Choices: \n [1] Rock \n [2] Paper \n [3] Scissors \n [4] Spock \n [5] Lizard\nChoose your weapon:");
             string playerChoice = Console.ReadLine();
             AnnounceDecision(playerChoice);
             return playerChoice;
