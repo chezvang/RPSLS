@@ -43,7 +43,7 @@ namespace RPSLS
 
         public void PickResolution(int onePoint, int twoPoint)
         {
-            PlayerPickResult resolution = new PlayerPickResult();
+            OnePlayerPickResult resolution = new OnePlayerPickResult();
             resolution.PickConversion(onePoint, twoPoint, playerOne, comPlayer);            
         }
 
@@ -71,7 +71,7 @@ namespace RPSLS
         public void CheckWinner(int onePoint, int twoPoint)
         {
             totalPoints = onePoint + twoPoint;
-            if (totalPoints < 5)
+            if (totalPoints < 4)
             {
                 PlayerOneStart(onePoint, twoPoint);
             }

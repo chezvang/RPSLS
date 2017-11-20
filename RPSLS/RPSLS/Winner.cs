@@ -12,10 +12,12 @@ namespace RPSLS
         {
             if(onePoint > twoPoint)
             {
+                Console.Clear();
                 Console.WriteLine("Player 1 wins the game!");
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Player 2 wins the game!");
             }
         }

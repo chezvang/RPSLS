@@ -16,14 +16,14 @@ namespace RPSLS
 
         public void PlayerOneStart(int onePoint, int twoPoint)
         {
-            Console.WriteLine("Player 1's turn");
+            Console.WriteLine("Player 1's turn: ");
             this.playerOne = base.PromptChoice();
             PlayerTwoStart(onePoint, twoPoint);
         }
 
         public void PlayerTwoStart(int onePoint, int twoPoint)
         {
-            Console.WriteLine("Player 2's turn");
+            Console.WriteLine("Player 2's turn: ");
             this.playerTwo = base.PromptChoice();
             PickResolution(onePoint, twoPoint);
         }
@@ -46,11 +46,28 @@ namespace RPSLS
             {
                 twoPoint++;
                 Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
-                CheckWinner(onePoint, twoPoint);
+                CheckAbsoluteWinner(onePoint, twoPoint);
             }
             else
             {
                 Console.WriteLine("It's a tie!\nPlayer 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
+                CheckAbsoluteWinner(onePoint, twoPoint);
+            }
+        }
+        public void CheckAbsoluteWinner(int onePoint, int twoPoint)
+        {
+            if (onePoint > 3)
+            {
+                Winner winner = new Winner();
+                winner.AnnounceWinner(onePoint, twoPoint);
+            }
+            else if (twoPoint > 3)
+            {
+                Winner winner = new Winner();
+                winner.AnnounceWinner(onePoint, twoPoint);
+            }
+            else
+            {
                 CheckWinner(onePoint, twoPoint);
             }
         }
@@ -67,6 +84,6 @@ namespace RPSLS
                 Winner winner = new Winner();
                 winner.AnnounceWinner(onePoint, twoPoint);
             }
-        }
+        }       
     }
 }

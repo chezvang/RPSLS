@@ -12,7 +12,7 @@ namespace RPSLS
 
         public void PlayChoice()
         {
-            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock! How many players are playing? \n Enter '1' or '2' ." );
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock!\nThis game is best out of 5.\nHow many players are playing?\nEnter '1' or '2' ." );
             playerChoice = Console.ReadLine();
             PlayDecision(playerChoice);
         }

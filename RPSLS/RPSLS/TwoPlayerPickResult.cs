@@ -32,22 +32,27 @@ namespace RPSLS
             switch (result)
             {
                 case 1:
-                    Console.WriteLine("Player One wins!");
+                    Console.Clear();
+                    Console.WriteLine("Player One wins!\n");
                     PlayerOnePoint(onePoint, twoPoint);
                     break;
                 case 2:
+                    Console.Clear();
                     Console.WriteLine("Player Two wins!\n");
                     PlayerTwoPoint(onePoint, twoPoint);
                     break;
                 case 3:
+                    Console.Clear();
                     Console.WriteLine("Player One wins!\n");
                     PlayerOnePoint(onePoint, twoPoint);
                     break;
                 case 4:
+                    Console.Clear();
                     Console.WriteLine("Player Two wins!\n");
                     PlayerTwoPoint(onePoint, twoPoint);
                     break;
                 default:
+                    Console.Clear();
                     Console.WriteLine("Tie! No winner.\n");
                     PlayerTie(onePoint, twoPoint);
                     break;
