@@ -11,7 +11,7 @@ namespace RPSLS
         public int comPickResult;
         //public string comResult;
 
-        public void ComputerPick()
+        public virtual void ComputerPick()
         {
             Random random = new Random();
 

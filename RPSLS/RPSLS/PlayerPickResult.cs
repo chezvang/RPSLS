@@ -8,6 +8,9 @@ namespace RPSLS
 {
     class PlayerPickResult
     {
+        public void ResolvePicks(string playerOne, string playerTwo)
+        {
 
+        }
     }
 }
