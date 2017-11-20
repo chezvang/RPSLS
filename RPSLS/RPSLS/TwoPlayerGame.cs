@@ -40,7 +40,7 @@ namespace RPSLS
             {
                 onePoint++;
                 Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
-                CheckWinner(onePoint, twoPoint);
+                CheckAbsoluteWinner(onePoint, twoPoint);
             }
             else if (twoScore == true)
             {
