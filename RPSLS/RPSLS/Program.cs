@@ -14,17 +14,17 @@ namespace RPSLS
             StartGame playChoice = new StartGame();
             playChoice.PlayChoice();
 
-            //player pick, base class
-              //set player for inheritance
-            PlayerPick player = new PlayerPick();
+            //OnePlayerGame playGame = new OnePlayerGame();
+            //playGame.PlayCheck();
 
+            //PlayerPick player = new PlayerPick();
+            //player.PromptDecision();
 
             //computer roll, if 1 player
             ComPick pick = new ComPick();
             pick.ComputerPick();
 
             Console.ReadKey();
-            //random roll class
                 //each player rolls
                 //random number generator 1 - 5
                     //1 rock

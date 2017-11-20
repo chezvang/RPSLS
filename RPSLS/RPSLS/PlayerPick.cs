@@ -6,7 +6,45 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
+    //parent class to hold result 1 - 5
+        //1-rock
+        //2-paper
+        //3-scissors
+        //4-lizard
+        //5-spock
     class PlayerPick
     {
+        public string playerChoice;
+        public string player; //used for announcing player
+
+        public virtual string PromptChoice()
+        {
+            Console.WriteLine("Choose your weapon:\n 1. Rock \n 2. Paper \n 3. Scissors \n 4. Lizard \n 5. Spock");
+            string playerChoice = Console.ReadLine();
+            AnnounceDecision(playerChoice);
+            return playerChoice;
+        }
+
+        public void AnnounceDecision(string playerChoice)
+        {
+            switch (playerChoice)
+            {
+                case "1":
+                    Console.WriteLine("You choose Rock");
+                    break;
+                case "2":
+                    Console.WriteLine("You choose Paper");
+                    break;
+                case "3":
+                    Console.WriteLine("You choose Scissors");
+                    break;
+                case "4":
+                    Console.WriteLine("You choose Lizard");
+                    break;
+                default:
+                    Console.WriteLine("You choose Spock");
+                    break;
+            }
+        }
     }
 }

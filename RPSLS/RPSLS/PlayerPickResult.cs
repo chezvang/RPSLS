@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Game
+    class PlayerPickResult
     {
-        
 
     }
 }

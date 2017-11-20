@@ -18,8 +18,11 @@ namespace RPSLS
             int comPickResult = random.Next(1, 5);
             ResultChoices(comPickResult);
         }
-
-        //use int to resolve game
+        
+        //may delete for inheritance from PlayerPick
+          //PlayerPick will hold results
+          //com roll result will move into PlayerPick to pick result of RPSLS
+        //use int to resolve choice
         public void ResultChoices(int comPickResult)
         {
             switch(comPickResult)
