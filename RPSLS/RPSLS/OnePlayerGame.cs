@@ -23,7 +23,8 @@ namespace RPSLS
 
         public void ComStart(int onePoint, int twoPoint)
         {
-            Console.WriteLine("Computer Player's turn: ");
+            Console.WriteLine("Computer Player's turn: (press any key to continue)");
+            Console.ReadKey();
             ComRoll(onePoint, twoPoint);
         }
 
@@ -32,6 +33,13 @@ namespace RPSLS
             Random random = new Random();
             int comPickResult = random.Next(1, 5);
             this.comPlayer = Convert.ToString(comPickResult);
+            ComAnnounce(onePoint, twoPoint, comPlayer);
+        }
+
+        public void ComAnnounce(int onePoint, int twoPoint, string comPlayer)
+        {
+            Console.WriteLine("Computer chose: " + comPlayer + " (press any key to continue)\n");
+            Console.ReadKey();
             ComDecision(onePoint, twoPoint, comPlayer);
         }
 
