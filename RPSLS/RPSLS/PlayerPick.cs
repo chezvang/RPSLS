@@ -19,7 +19,7 @@ namespace RPSLS
 
         public virtual string PromptChoice()
         {
-            Console.WriteLine("Choose your weapon:\n 1. Rock \n 2. Paper \n 3. Scissors \n 4. Lizard \n 5. Spock");
+            Console.WriteLine("Choose your weapon:\n 1. Rock \n 2. Paper \n 3. Scissors \n 4. Lizard \n 5. Spock\n");
             string playerChoice = Console.ReadLine();
             AnnounceDecision(playerChoice);
             return playerChoice;
@@ -41,8 +41,12 @@ namespace RPSLS
                 case "4":
                     Console.WriteLine("You choose Lizard\n");
                     break;
-                default:
+                case "5":
                     Console.WriteLine("You choose Spock\n");
+                    break;
+                default:
+                    Console.WriteLine("Please choose a number.\n");
+                    PromptChoice();
                     break;
             }
         }

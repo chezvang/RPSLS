@@ -25,7 +25,7 @@ namespace RPSLS
                 case "1":
                     Console.WriteLine("You have choosen a 1 player game");
                     OnePlayerGame game = new OnePlayerGame();
-                    game.PlayerOneStart();
+                    game.PlayerOneStart(0, 0);
                     break;
                 case "2":
                     Console.WriteLine("You have choosen a 2 player game");

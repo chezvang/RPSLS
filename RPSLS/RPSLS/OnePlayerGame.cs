@@ -14,61 +14,66 @@ namespace RPSLS
         public int twoPoint;
         public int totalPoints;
 
-        public void PlayerOneStart()
+        public void PlayerOneStart(int onePoint, int twoPoint)
         {
             Console.WriteLine("Player 1's turn");
             this.playerOne = base.PromptChoice();
-            ComStart();
+            ComStart(onePoint, twoPoint);
         }
 
-        public void ComStart()
+        public void ComStart(int onePoint, int twoPoint)
         {
             Console.WriteLine("Computer Player's turn.");
-            ComRoll();
+            ComRoll(onePoint, twoPoint);
         }
 
-        public void ComRoll()
+        public void ComRoll(int onePoint, int twoPoint)
         {
             Random random = new Random();
             int comPickResult = random.Next(1, 5);
             this.comPlayer = Convert.ToString(comPickResult);
-            ComDecision(comPlayer);
+            ComDecision(onePoint, twoPoint, comPlayer);
         }
 
-        public void ComDecision(string comPlayer)
+        public void ComDecision(int onePoint, int twoPoint, string comPlayer)
         {
             base.AnnounceDecision(comPlayer);
-            PickResolution();
+            PickResolution(onePoint, twoPoint);
         }
 
-        public void PickResolution()
+        public void PickResolution(int onePoint, int twoPoint)
         {
             PlayerPickResult resolution = new PlayerPickResult();
-            resolution.PickConversion(playerOne, comPlayer);            
+            resolution.PickConversion(onePoint, twoPoint, playerOne, comPlayer);            
         }
 
-        public void PointTracker(Boolean oneScore, Boolean twoScore)
+        public void PointTracker(int onePoint, int twoPoint, Boolean oneScore, Boolean twoScore)
         {
             if(oneScore == true)
             {
                 onePoint++;
                 Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
-                CheckWinner();
+                CheckWinner(onePoint, twoPoint);
             }
-            else
+            else if (twoScore == true)
             {
                 twoPoint++;
                 Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
-                CheckWinner();
+                CheckWinner(onePoint, twoPoint);
+            }
+            else
+            {
+                Console.WriteLine("It's a tie!\nPlayer 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
+                CheckWinner(onePoint, twoPoint);
             }
         }
 
-        public void CheckWinner()
+        public void CheckWinner(int onePoint, int twoPoint)
         {
             totalPoints = onePoint + twoPoint;
             while (totalPoints < 6)
             {
-                PlayerOneStart();
+                PlayerOneStart(onePoint, twoPoint);
             }
         }
     }
