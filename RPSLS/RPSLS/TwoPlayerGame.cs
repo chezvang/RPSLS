@@ -30,7 +30,7 @@ namespace RPSLS
 
         public void PickResolution(int onePoint, int twoPoint)
         {
-            PlayerPickResult resolution = new PlayerPickResult();
+            TwoPlayerPickResult resolution = new TwoPlayerPickResult();
             resolution.PickConversion(onePoint, twoPoint, playerOne, playerTwo);
         }
 

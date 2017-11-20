@@ -16,14 +16,14 @@ namespace RPSLS
 
         public void PlayerOneStart(int onePoint, int twoPoint)
         {
-            Console.WriteLine("Player 1's turn");
+            Console.WriteLine("Player 1's turn: ");
             this.playerOne = base.PromptChoice();
             ComStart(onePoint, twoPoint);
         }
 
         public void ComStart(int onePoint, int twoPoint)
         {
-            Console.WriteLine("Computer Player's turn.");
+            Console.WriteLine("Computer Player's turn: ");
             ComRoll(onePoint, twoPoint);
         }
 

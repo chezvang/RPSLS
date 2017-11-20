@@ -51,6 +51,7 @@
     <Compile Include="OnePlayerGame.cs" />
     <Compile Include="ComPick.cs" />
     <Compile Include="TwoPlayerGame.cs" />
+    <Compile Include="TwoPlayerPickResult.cs" />
     <Compile Include="Winner.cs" />
   </ItemGroup>
   <ItemGroup>

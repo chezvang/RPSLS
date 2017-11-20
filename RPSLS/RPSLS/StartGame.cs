@@ -16,8 +16,7 @@ namespace RPSLS
             playerChoice = Console.ReadLine();
             PlayDecision(playerChoice);
         }
-        //1 player  vs com
-        //1 player vs 2 player
+
         public void PlayDecision(string playerChoice)
         {
             switch(playerChoice)

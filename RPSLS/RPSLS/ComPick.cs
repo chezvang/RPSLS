@@ -37,10 +37,10 @@ namespace RPSLS
                     Console.WriteLine("Computer chose Scissors");
                     break;
                 case 4:
-                    Console.WriteLine("Computer chose Lizard");
+                    Console.WriteLine("Computer chose Spock");
                     break;
                 default:
-                    Console.WriteLine("Computer chose Spock");
+                    Console.WriteLine("Computer chose Lizard");
                     break;
             }
         }

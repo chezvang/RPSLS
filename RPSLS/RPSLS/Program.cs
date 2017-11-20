@@ -14,7 +14,7 @@ namespace RPSLS
             playChoice.PlayChoice();
 
             Console.ReadKey();
-                        
+            
         }
     }
 }
