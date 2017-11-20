@@ -30,19 +30,19 @@ namespace RPSLS
             switch (playerChoice)
             {
                 case "1":
-                    Console.WriteLine("You choose Rock");
+                    Console.WriteLine("You choose Rock\n");
                     break;
                 case "2":
-                    Console.WriteLine("You choose Paper");
+                    Console.WriteLine("You choose Paper\n");
                     break;
                 case "3":
-                    Console.WriteLine("You choose Scissors");
+                    Console.WriteLine("You choose Scissors\n");
                     break;
                 case "4":
-                    Console.WriteLine("You choose Lizard");
+                    Console.WriteLine("You choose Lizard\n");
                     break;
                 default:
-                    Console.WriteLine("You choose Spock");
+                    Console.WriteLine("You choose Spock\n");
                     break;
             }
         }

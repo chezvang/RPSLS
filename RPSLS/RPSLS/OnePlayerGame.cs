@@ -10,6 +10,9 @@ namespace RPSLS
     {
         public string playerOne;
         public string comPlayer;
+        public int onePoint;
+        public int twoPoint;
+        public int totalPoints;
 
         public void PlayerOneStart()
         {
@@ -41,16 +44,32 @@ namespace RPSLS
         public void PickResolution()
         {
             PlayerPickResult resolution = new PlayerPickResult();
-            resolution.PickConversion(playerOne, comPlayer);
-            
-            //convert strings to int
-              //resolve game
-              //give point to winner
+            resolution.PickConversion(playerOne, comPlayer);            
         }
 
-        public void PointTracker()
+        public void PointTracker(Boolean oneScore, Boolean twoScore)
         {
+            if(oneScore == true)
+            {
+                onePoint++;
+                Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
+                CheckWinner();
+            }
+            else
+            {
+                twoPoint++;
+                Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
+                CheckWinner();
+            }
+        }
 
+        public void CheckWinner()
+        {
+            totalPoints = onePoint + twoPoint;
+            while (totalPoints < 6)
+            {
+                PlayerOneStart();
+            }
         }
     }
 }
