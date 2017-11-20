@@ -29,6 +29,8 @@ namespace RPSLS
                     break;
                 case "2":
                     Console.WriteLine("You have choosen a 2 player game");
+                    TwoPlayerGame twogame = new TwoPlayerGame();
+                    twogame.PlayerOneStart(0, 0);
                     break;
                 default:
                     Console.WriteLine("Please choose the number of players.");
