@@ -28,19 +28,29 @@ namespace RPSLS
         {
             Random random = new Random();
             int comPickResult = random.Next(1, 5);
-            comPlayer = Convert.ToString(comPickResult);
+            this.comPlayer = Convert.ToString(comPickResult);
             ComDecision(comPlayer);
         }
 
         public void ComDecision(string comPlayer)
         {
             base.AnnounceDecision(comPlayer);
+            PickResolution();
         }
 
         public void PickResolution()
         {
             PlayerPickResult resolution = new PlayerPickResult();
-            resolution.ResolvePicks(playerOne, comPlayer);
+            resolution.PickConversion(playerOne, comPlayer);
+            
+            //convert strings to int
+              //resolve game
+              //give point to winner
+        }
+
+        public void PointTracker()
+        {
+
         }
     }
 }
