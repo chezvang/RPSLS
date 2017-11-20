@@ -59,11 +59,28 @@ namespace RPSLS
             {
                 twoPoint++;
                 Console.WriteLine("Player 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
-                CheckWinner(onePoint, twoPoint);
+                CheckAbsoluteWinner(onePoint, twoPoint);
             }
             else
             {
                 Console.WriteLine("It's a tie!\nPlayer 1: " + onePoint + "\nPlayer 2: " + twoPoint + "\n");
+                CheckAbsoluteWinner(onePoint, twoPoint);
+            }
+        }
+        public void CheckAbsoluteWinner(int onePoint, int twoPoint)
+        {
+            if (onePoint > 2)
+            {
+                Winner winner = new Winner();
+                winner.AnnounceWinner(onePoint, twoPoint);
+            }
+            else if (twoPoint > 2)
+            {
+                Winner winner = new Winner();
+                winner.AnnounceWinner(onePoint, twoPoint);
+            }
+            else
+            {
                 CheckWinner(onePoint, twoPoint);
             }
         }
@@ -71,7 +88,7 @@ namespace RPSLS
         public void CheckWinner(int onePoint, int twoPoint)
         {
             totalPoints = onePoint + twoPoint;
-            if (totalPoints < 4)
+            if (totalPoints < 5)
             {
                 PlayerOneStart(onePoint, twoPoint);
             }

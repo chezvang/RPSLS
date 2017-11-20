@@ -56,12 +56,12 @@ namespace RPSLS
         }
         public void CheckAbsoluteWinner(int onePoint, int twoPoint)
         {
-            if (onePoint > 3)
+            if (onePoint > 2)
             {
                 Winner winner = new Winner();
                 winner.AnnounceWinner(onePoint, twoPoint);
             }
-            else if (twoPoint > 3)
+            else if (twoPoint > 2)
             {
                 Winner winner = new Winner();
                 winner.AnnounceWinner(onePoint, twoPoint);

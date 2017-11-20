@@ -13,8 +13,7 @@ namespace RPSLS
             StartGame playChoice = new StartGame();
             playChoice.PlayChoice();
 
-            Console.ReadKey();
-            
+            Console.ReadKey();            
         }
     }
 }
