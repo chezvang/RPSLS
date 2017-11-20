@@ -70,7 +70,7 @@ namespace RPSLS
             else
             {
                 Console.Clear();
-                Console.WriteLine("Thanks for playing!");
+                Console.WriteLine("Thanks for playing!\nPress any key to close this window.");
             }
         }
     }
