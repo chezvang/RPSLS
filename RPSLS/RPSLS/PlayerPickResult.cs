@@ -73,6 +73,3 @@ namespace RPSLS
         }
     }
 }
-
-
-//rock(1) > scissor(3)

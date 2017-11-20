@@ -71,9 +71,14 @@ namespace RPSLS
         public void CheckWinner(int onePoint, int twoPoint)
         {
             totalPoints = onePoint + twoPoint;
-            while (totalPoints < 6)
+            if (totalPoints < 5)
             {
                 PlayerOneStart(onePoint, twoPoint);
+            }
+            else
+            {
+                Winner winner = new Winner();
+                winner.AnnounceWinner(onePoint, twoPoint);
             }
         }
     }
