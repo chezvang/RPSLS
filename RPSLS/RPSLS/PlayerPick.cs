@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    //parent class to hold result 1 - 5
-        //1-rock
-        //2-paper
-        //3-scissors
-        //4-lizard
-        //5-spock
     class PlayerPick
     {
         public string playerChoice;
-        public string player; //used for announcing player
+        public string player;
 
         public virtual string PromptChoice()
         {
